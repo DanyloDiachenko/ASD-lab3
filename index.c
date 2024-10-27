@@ -2,21 +2,20 @@
 #include <math.h>
 
 double factorial(int n);
-
 double calculateExponential(double x, double epsilon);
 
 int main() {
-    double x = 4;
-    double epsilon = 0.001;
+    const double x = 6;
+    const double epsilon = 0.01;
 
-    double result = calculateExponential(x, epsilon);
+    const double result = calculateExponential(x, epsilon);
 
     printf("%f\n", result);
 
     return 0;
 }
 
-double calculateExponential(double x, double epsilon) {
+double calculateExponential(const double x, const double epsilon) {
     double term = 1.0;
     double sum = 1.0;
     int n = 1;
@@ -30,7 +29,7 @@ double calculateExponential(double x, double epsilon) {
     return sum;
 }
 
-double factorial(int n) {
+double factorial(const int n) {
     double factorial = 1.0;
 
     for (int i = 2; i <= n; i++) {
